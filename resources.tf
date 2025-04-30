@@ -59,13 +59,13 @@ resource "aws_security_group" "ingress" {
   name                   = "no-ingress-sg"
   name_prefix            = null
   revoke_rules_on_delete = null
-  tags = merge (
+  tags = merge(
     {
       Name = "NoIngress SG"
     },
     local.common_tags
   )
-  tags_all = merge (
+  tags_all = merge(
     {
       Name = "NoIngress SG"
     },
